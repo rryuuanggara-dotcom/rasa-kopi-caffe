@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Rasa Kopi Cafe & Resto</title>
+
+<!-- BOOTSTRAP 5 -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body {
+    background: #f8f5f0;
+    font-family: Arial, sans-serif;
+}
+
+.navbar, footer {
+    background: #4b2e20;
+}
+
+.navbar-brand, .nav-link {
+    color: white !important;
+}
+
+.nav-link:hover {
+    color: #ffc107 !important;
+}
+
+.carousel-item img {
+    width: 100%;
+    height: 430px;
+    object-fit: cover;
+}
+
+.judul {
+    color: #4b2e20;
+    font-weight: bold;
+}
+
+.info-card {
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 3px 10px rgba(0,0,0,.1);
+    height: 100%;
+}
+
+.menu-card {
+    border: none;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 3px 12px rgba(0,0,0,.12);
+    transition: .3s;
+    height: 100%;
+}
+
+.menu-card:hover {
+    transform: translateY(-5px);
+}
+
+.menu-card img {
+    height: 210px;
+    object-fit: cover;
+}
+
+.btn-cafe {
+    background: #6f432c;
+    color: white;
+}
+
+.btn-cafe:hover {
+    background: #4b2e20;
+    color: white;
+}
+
+.about-box, .form-box, .order-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0,0,0,.1);
+}
+
+.promo {
+    display: none;
+    background: #fff0d9;
+    border: 2px dashed #a45b24;
+    border-radius: 15px;
+    padding: 25px;
+    text-align: center;
+    animation: muncul .6s ease;
+}
+
+@keyframes muncul {
+    from {opacity: 0; transform: scale(.8);}
+    to {opacity: 1; transform: scale(1);}
+}
+
+footer {
+    color: white;
+    padding: 30px;
+    margin-top: 50px;
+}
+
+section {
+    scroll-margin-top: 70px;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+<div class="container">
+
+<a class="navbar-brand fw-bold" href="#home">☕ Rasa Kopi</a>
+
+<button class="navbar-toggler" type="button"
+data-bs-toggle="collapse" data-bs-target="#menuNavbar">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="menuNavbar">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#informasi">Informasi</a></li>
+<li class="nav-item"><a class="nav-link" href="#makanan">Makanan</a></li>
+<li class="nav-item"><a class="nav-link" href="#minuman">Minuman</a></li>
+<li class="nav-item"><a class="nav-link" href="#pesanan">Pesanan</a></li>
+<li class="nav-item"><a class="nav-link" href="#reservasi">Reservasi</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- CAROUSEL 3 GAMBAR -->
+<section id="home">
+
+<div id="sliderCafe" class="carousel slide carousel-fade"
+data-bs-ride="carousel" data-bs-interval="3000">
+
+<div class="carousel-indicators">
+<button type="button" data-bs-target="#sliderCafe"
+data-bs-slide-to="0" class="active"></button>
+
+<button type="button" data-bs-target="#sliderCafe"
+data-bs-slide-to="1"></button>
+
+<button type="button" data-bs-target="#sliderCafe"
+data-bs-slide-to="2"></button>
+</div>
+
+<div class="carousel-inner">
+
+<div class="carousel-item active">
+<img src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?w=1400"
+alt="Suasana cafe">
+<div class="carousel-caption">
+<h2>Selamat Datang di Rasa Kopi</h2>
+<p>Tempat nyaman untuk menikmati waktu bersama.</p>
+</div>
+</div>
+
+<div class="carousel-item">
+<img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=1400"
+alt="Kopi cafe">
+<div class="carousel-caption">
+<h2>Rasa yang Istimewa</h2>
+<p>Nikmati sajian terbaik dari cafe kami.</p>
+</div>
+</div>
+
+<div class="carousel-item">
+<img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=1400"
+alt="Secangkir kopi">
+<div class="carousel-caption">
+<h2>Tempat Nongkrong Favorit</h2>
+<p>Bersantai, berkumpul, dan menikmati hidangan.</p>
+</div>
+</div>
+
+</div>
+
+<button class="carousel-control-prev" type="button"
+data-bs-target="#sliderCafe" data-bs-slide="prev">
+<span class="carousel-control-prev-icon"></span>
+</button>
+
+<button class="carousel-control-next" type="button"
+data-bs-target="#sliderCafe" data-bs-slide="next">
+<span class="carousel-control-next-icon"></span>
+</button>
+
+</div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="container py-5">
+
+<div class="about-box text-center">
+<h2 class="judul mb-3">Tentang Rasa Kopi</h2>
+
+<p>
+Rasa Kopi Cafe & Resto adalah tempat nongkrong yang nyaman
+dengan berbagai pilihan makanan dan minuman yang lezat.
+</p>
+
+<p>
+Kami menyediakan suasana yang cocok untuk berkumpul bersama
+teman, keluarga, maupun menikmati waktu santai.
+</p>
+
+</div>
+</section>
+
+<!-- GRID 4 KOTAK INFORMASI -->
+<section id="informasi" class="container py-5">
+
+<h2 class="judul text-center mb-4">Informasi Cafe</h2>
+
+<div class="row g-3">
+
+<div class="col-12 col-lg-3">
+<div class="info-card">
+<h1>☕</h1>
+<h5>Minuman</h5>
+<p>Berbagai pilihan kopi dan minuman segar.</p>
+</div>
+</div>
+
+<div class="col-12 col-lg-3">
+<div class="info-card">
+<h1>🍽️</h1>
+<h5>Makanan</h5>
+<p>Hidangan lezat dengan harga terjangkau.</p>
+</div>
+</div>
+
+<div class="col-12 col-lg-3">
+<div class="info-card">
+<h1>🪑</h1>
+<h5>Tempat Nyaman</h5>
+<p>Tempat santai untuk keluarga dan teman.</p>
+</div>
+</div>
+
+<div class="col-12 col-lg-3">
+<div class="info-card">
+<h1>🎉</h1>
+<h5>Promo</h5>
+<p>Dapatkan diskon 10% setelah reservasi.</p>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- MENU MAKANAN -->
+<section id="makanan" class="container py-5">
+
+<h2 class="judul text-center mb-4">Menu Makanan</h2>
+
+<div class="row g-4">
+
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card menu-card">
+<img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?w=700"
+alt="Nasi Goreng">
+<div class="card-body">
+<h5>Nasi Goreng Spesial</h5>
+<p>Nasi goreng dengan telur, ayam dan bumbu pilihan.</p>
+<h5>Rp25.000</h5>
+
+<button class="btn btn-cafe w-100"
+onclick="detailMenu('Nasi Goreng Spesial','Nasi goreng dengan telur, ayam dan bumbu pilihan.','Rp25.000')">
+Detail Menu
+</button>
+
+<button class="btn btn-outline-success w-100 mt-2"
+onclick="tambahPesanan('Nasi Goreng Spesial',25000)">
+Tambah Pesanan
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card menu-card">
+<img src="https://images.unsplash.com/photo-1569718212165-3a8278d5f624?w=700"
+alt="Mie Goreng">
+<div class="card-body">
+<h5>Mie Goreng</h5>
+<p>Mie goreng dengan sayuran dan topping pilihan.</p>
+<h5>Rp20.000</h5>
+
+<button class="btn btn-cafe w-100"
+onclick="detailMenu('Mie Goreng','Mie goreng dengan sayuran dan topping pilihan.','Rp20.000')">
+Detail Menu
+</button>
+
+<button class="btn btn-outline-success w-100 mt-2"
+onclick="tambahPesanan('Mie Goreng',20000)">
+Tambah Pesanan
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card menu-card">
+<img src="https://images.unsplash.com/photo-1525351484163-7529414344d8?w=700"
+alt="Roti Bakar">
+<div class="card-body">
+<h5>Roti Bakar Cokelat</h5>
+<p>Roti panggang dengan isian cokelat manis.</p>
+<h5>Rp15.000</h5>
+
+<button class="btn btn-cafe w-100"
+onclick="detailMenu('Roti Bakar Cokelat','Roti panggang dengan isian cokelat manis.','Rp15.000')">
+Detail Menu
+</button>
+
+<button class="btn btn-outline-success w-100 mt-2"
+onclick="tambahPesanan('Roti Bakar Cokelat',15000)">
+Tambah Pesanan
+</button>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- MENU MINUMAN -->
+<section id="minuman" class="container py-5">
+
+<h2 class="judul text-center mb-4">Menu Minuman</h2>
+
+<div class="row g-4">
+
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card menu-card">
+<img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=700"
+alt="Cappuccino">
+<div class="card-body">
+<h5>Cappuccino</h5>
+<p>Kopi espresso dengan susu dan foam lembut.</p>
+<h5>Rp22.000</h5>
+
+<button class="btn btn-cafe w-100"
+onclick="detailMenu('Cappuccino','Kopi espresso dengan susu dan foam lembut.','Rp22.000')">
+Detail Menu
+</button>
+
+<button class="btn btn-outline-success w-100 mt-2"
+onclick="tambahPesanan('Cappuccino',22000)">
+Tambah Pesanan
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card menu-card">
+<img src="https://images.unsplash.com/photo-1515823064-d6e0c04616a7?w=700"
+alt="Matcha Latte">
+<div class="card-body">
+<h5>Matcha Latte</h5>
+<p>Minuman matcha dengan campuran susu segar.</p>
+<h5>Rp22.000</h5>
+
+<button class="btn btn-cafe w-100"
+onclick="detailMenu('Matcha Latte','Minuman matcha dengan campuran susu segar.','Rp22.000')">
+Detail Menu
+</button>
+
+<button class="btn btn-outline-success w-100 mt-2"
+onclick="tambahPesanan('Matcha Latte',22000)">
+Tambah Pesanan
+</button>
+</div>
+</div>
+</div>
+
+<div class="col-12 col-md-6 col-lg-4">
+<div class="card menu-card">
+<img src="https://images.unsplash.com/photo-1572490122747-3968b75cc699?w=700"
+alt="Chocolate Drink">
+<div class="card-body">
+<h5>Chocolate Drink</h5>
+<p>Minuman cokelat manis dan menyegarkan.</p>
+<h5>Rp20.000</h5>
+
+<button class="btn btn-cafe w-100"
+onclick="detailMenu('Chocolate Drink','Minuman cokelat manis dan menyegarkan.','Rp20.000')">
+Detail Menu
+</button>
+
+<button class="btn btn-outline-success w-100 mt-2"
+onclick="tambahPesanan('Chocolate Drink',20000)">
+Tambah Pesanan
+</button>
+</div>
+</div>
+</div>
+
+</div>
+</section>
+
+<!-- MODAL DETAIL MENU -->
+<div class="modal fade" id="modalDetail" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+
+<div class="modal-header">
+<h5 class="modal-title">Detail Menu</h5>
+<button type="button" class="btn-close"
+data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body text-center">
+<h4 id="detailNama"></h4>
+<p id="detailDeskripsi"></p>
+<h5 class="text-success" id="detailHarga"></h5>
+</div>
+
+<div class="modal-footer">
+<button class="btn btn-secondary"
+data-bs-dismiss="modal">Tutup</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- PESANAN -->
+<section id="pesanan" class="container py-5">
+
+<div class="order-box">
+<h2 class="judul text-center mb-4">Keranjang Pesanan</h2>
+
+<div id="daftarPesanan">
+<p class="text-center text-muted">Belum ada pesanan.</p>
+</div>
+
+<hr>
+
+<div class="d-flex justify-content-between">
+<strong>Subtotal:</strong>
+<strong id="subtotal">Rp0</strong>
+</div>
+
+<div id="barisDiskon" style="display:none;"
+class="d-flex justify-content-between text-success mt-2">
+<strong>Diskon Reservasi 10%:</strong>
+<strong id="nilaiDiskon">-Rp0</strong>
+</div>
+
+<hr>
+
+<div class="d-flex justify-content-between">
+<h5>Total Bayar:</h5>
+<h5 id="totalBayar">Rp0</h5>
+</div>
+
+<div class="mt-3">
+<label class="form-label">Nama Pemesan</label>
+<input type="text" id="namaPemesan"
+class="form-control" placeholder="Masukkan nama">
+</div>
+
+<button class="btn btn-cafe w-100 mt-3"
+onclick="kirimWhatsApp()">
+Pesan Melalui WhatsApp
+</button>
+
+</div>
+</section>
+
+<!-- FORM RESERVASI -->
+<section id="reservasi" class="container py-5">
+
+<h2 class="judul text-center mb-4">Reservasi Meja</h2>
+
+<div class="row justify-content-center">
+<div class="col-12 col-md-8 col-lg-7">
+
+<div class="form-box">
+
+<form id="formReservasi" onsubmit="bukaKonfirmasi(event)">
+
+<div class="mb-3">
+<label class="form-label">Nama Lengkap</label>
+<input type="text" id="namaReservasi"
+class="form-control" placeholder="Masukkan nama lengkap"
+required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Email</label>
+<input type="email" id="emailReservasi"
+class="form-control" placeholder="Masukkan email"
+required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Tanggal Reservasi</label>
+<input type="date" id="tanggalReservasi"
+class="form-control" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Jumlah Orang</label>
+<input type="number" id="jumlahOrang"
+class="form-control" min="1"
+placeholder="Masukkan jumlah orang" required>
+</div>
+
+<div class="mb-3">
+<label class="form-label">Catatan Tambahan</label>
+<textarea id="catatanReservasi"
+class="form-control" rows="3"
+placeholder="Catatan jika ada"></textarea>
+</div>
+
+<button type="submit" class="btn btn-cafe w-100">
+Reservasi Sekarang
+</button>
+
+</form>
+
+<!-- PROMO BARU MUNCUL SETELAH KONFIRMASI -->
+<div id="promo" class="promo mt-4">
+<h2>🎉 SELAMAT! 🎉</h2>
+<h1 class="text-danger fw-bold">DISKON 10%</h1>
+<p>Reservasi meja kamu berhasil!</p>
+<p>Nikmati diskon 10% untuk pesanan makanan dan minuman.</p>
+<h5 class="text-success">Terima kasih telah memilih Rasa Kopi!</h5>
+</div>
+
+</div>
+</div>
+</div>
+</section>
+
+<!-- MODAL KONFIRMASI RESERVASI -->
+<div class="modal fade" id="modalReservasi" tabindex="-1">
+<div class="modal-dialog modal-dialog-centered">
+<div class="modal-content">
+
+<div class="modal-header">
+<h5 class="modal-title">Konfirmasi Reservasi</h5>
+<button type="button" class="btn-close"
+data-bs-dismiss="modal"></button>
+</div>
+
+<div class="modal-body">
+<p>Apakah data reservasi kamu sudah benar?</p>
+<div id="ringkasanReservasi"></div>
+<p class="text-success fw-bold mt-3">
+Kamu akan mendapatkan diskon 10% setelah konfirmasi.
+</p>
+</div>
+
+<div class="modal-footer">
+<button class="btn btn-secondary"
+data-bs-dismiss="modal">Periksa Lagi</button>
+
+<button class="btn btn-cafe"
+onclick="konfirmasiReservasi()">
+Ya, Konfirmasi
+</button>
+</div>
+
+</div>
+</div>
+</div>
+
+<!-- FOOTER -->
+<footer class="text-center">
+<h4>☕ Rasa Kopi Cafe & Resto</h4>
+<p>Tempat menikmati rasa dan kebersamaan.</p>
+<p>Instagram: @rasakopi</p>
+<p>WhatsApp: 08xxxxxxxxxx</p>
+<small>© 2026 Rasa Kopi Cafe & Resto</small>
+</footer>
+
+<!-- BOOTSTRAP JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+
+// FORMAT RUPIAH
+function rupiah(angka) {
+    return "Rp" + angka.toLocaleString("id-ID");
+}
+
+// STATUS DISKON
+let sudahReservasi = false;
+
+// KERANJANG
+let keranjang = [];
+
+// MODAL DETAIL MENU
+function detailMenu(nama, deskripsi, harga) {
+    document.getElementById("detailNama").innerText = nama;
+    document.getElementById("detailDeskripsi").innerText = deskripsi;
+    document.getElementById("detailHarga").innerText = harga;
+
+    let modal = new bootstrap.Modal(
+        document.getElementById("modalDetail")
+    );
+
+    modal.show();
+}
+
+// TAMBAH PESANAN
+function tambahPesanan(nama, harga) {
+    let item = keranjang.find(p => p.nama === nama);
+
+    if (item) {
+        item.jumlah++;
+    } else {
+        keranjang.push({
+            nama: nama,
+            harga: harga,
+            jumlah: 1
+        });
+    }
+
+    tampilkanPesanan();
+    alert(nama + " berhasil ditambahkan!");
+}
+
+// UBAH JUMLAH
+function ubahJumlah(nama, perubahan) {
+    let item = keranjang.find(p => p.nama === nama);
+
+    if (item) {
+        item.jumlah += perubahan;
+
+        if (item.jumlah <= 0) {
+            keranjang = keranjang.filter(p => p.nama !== nama);
+        }
+    }
+
+    tampilkanPesanan();
+}
+
+// HAPUS PESANAN
+function hapusPesanan(nama) {
+    keranjang = keranjang.filter(p => p.nama !== nama);
+    tampilkanPesanan();
+}
+
+// TAMPILKAN PESANAN
+function tampilkanPesanan() {
+    let daftar = document.getElementById("daftarPesanan");
+    let total = 0;
+
+    if (keranjang.length === 0) {
+        daftar.innerHTML =
+        '<p class="text-center text-muted">Belum ada pesanan.</p>';
+    } else {
+        daftar.innerHTML = "";
+
+        keranjang.forEach(item => {
+            let jumlahHarga = item.harga * item.jumlah;
+            total += jumlahHarga;
+
+            daftar.innerHTML += `
+            <div class="border-bottom py-3">
+                <div class="d-flex justify-content-between flex-wrap gap-2">
+                    <div>
+                        <strong>${item.nama}</strong><br>
+                        <small>${rupiah(item.harga)} x ${item.jumlah}</small><br>
+                        <strong>${rupiah(jumlahHarga)}</strong>
+                    </div>
+
+                    <div class="d-flex align-items-center gap-2">
+                        <button class="btn btn-sm btn-outline-secondary"
+                        onclick="ubahJumlah('${item.nama}',-1)">-</button>
+
+                        <span>${item.jumlah}</span>
+
+                        <button class="btn btn-sm btn-outline-secondary"
+                        onclick="ubahJumlah('${item.nama}',1)">+</button>
+
+                        <button class="btn btn-sm btn-danger"
+                        onclick="hapusPesanan('${item.nama}')">Hapus</button>
+                    </div>
+                </div>
+            </div>`;
+        });
+    }
+
+    let diskon = sudahReservasi ? total * 0.10 : 0;
+    let bayar = total - diskon;
+
+    document.getElementById("subtotal").innerText = rupiah(total);
+    document.getElementById("nilaiDiskon").innerText = "-" + rupiah(diskon);
+    document.getElementById("totalBayar").innerText = rupiah(bayar);
+
+    document.getElementById("barisDiskon").style.display =
+        sudahReservasi && total > 0 ? "flex" : "none";
+}
+
+// KIRIM PESANAN WHATSAPP
+function kirimWhatsApp() {
+    let nama = document.getElementById("namaPemesan").value.trim();
+
+    if (nama === "") {
+        alert("Masukkan nama pemesan terlebih dahulu!");
+        return;
+    }
+
+    if (keranjang.length === 0) {
+        alert("Keranjang masih kosong!");
+        return;
+    }
+
+    let total = 0;
+    let pesan = "Halo Rasa Kopi, saya ingin memesan:\n\n";
+    pesan += "Nama: " + nama + "\n\n";
+
+    keranjang.forEach(item => {
+        let jumlahHarga = item.harga * item.jumlah;
+        total += jumlahHarga;
+
+        pesan += item.nama + " x " + item.jumlah +
+        " = " + rupiah(jumlahHarga) + "\n";
+    });
+
+    let diskon = sudahReservasi ? total * 0.10 : 0;
+
+    pesan += "\nSubtotal: " + rupiah(total);
+
+    if (sudahReservasi) {
+        pesan += "\nDiskon 10%: -" + rupiah(diskon);
+    }
+
+    pesan += "\nTotal Bayar: " + rupiah(total - diskon);
+    pesan += "\nTerima kasih.";
+
+    // GANTI NOMOR DENGAN NOMOR WHATSAPP CAFE
+    let nomor = "6281234567890";
+
+    window.open(
+        "https://wa.me/" + nomor + "?text=" +
+        encodeURIComponent(pesan),
+        "_blank"
+    );
+}
+
+// TANGGAL MINIMAL HARI INI
+document.getElementById("tanggalReservasi").min =
+    new Date().toISOString().split("T")[0];
+
+// BUKA MODAL KONFIRMASI
+function bukaKonfirmasi(event) {
+    event.preventDefault();
+
+    let nama = document.getElementById("namaReservasi").value;
+    let tanggal = document.getElementById("tanggalReservasi").value;
+    let jumlah = document.getElementById("jumlahOrang").value;
+
+    document.getElementById("ringkasanReservasi").innerHTML = `
+        <p><strong>Nama:</strong> ${nama}</p>
+        <p><strong>Tanggal:</strong> ${tanggal}</p>
+        <p><strong>Jumlah Orang:</strong> ${jumlah}</p>
+    `;
+
+    let modal = new bootstrap.Modal(
+        document.getElementById("modalReservasi")
+    );
+
+    modal.show();
+}
+
+// KONFIRMASI RESERVASI
+function konfirmasiReservasi() {
+    sudahReservasi = true;
+
+    // TUTUP MODAL
+    bootstrap.Modal.getInstance(
+        document.getElementById("modalReservasi")
+    ).hide();
+
+    // SEMBUNYIKAN FORM
+    document.getElementById("formReservasi").style.display = "none";
+
+    // TAMPILKAN PROMO DISKON
+    document.getElementById("promo").style.display = "block";
+
+    // HITUNG ULANG KERANJANG
+    tampilkanPesanan();
+
+    alert("Reservasi berhasil! Kamu mendapatkan diskon 10%.");
+}
+
+tampilkanPesanan();
+
+</script>
+
+</body>
+</html>
